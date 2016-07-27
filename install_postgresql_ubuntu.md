@@ -42,4 +42,16 @@ Create database with the same name as the role being used to login
 createdb zet
 ```
 
+###Logout postgresql user
+
+```
+exit
+```
+### Open a Postgres Prompt with the New Role
+
+```
+sudo -i -u sammy
+psql
+```
+
 
