@@ -43,7 +43,7 @@ Create database with the same name as the role being used to login
 createdb zet
 ```
 
-###Logout postgresql user
+### Logout postgres user
 
 ```
 exit
