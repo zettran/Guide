@@ -1,8 +1,10 @@
 # Install Postgresql Ubuntu
 
 ### Install
+```
 sudo apt-get update
 sudo apt-get install postgresql postgresql-contrib
+```
 
 ### Switching Over to the postgres Account
 The installation procedure created a user account called postgres that is associated with the default Postgres role. 
@@ -29,7 +31,6 @@ If you are logged in as the postgres account, you can create a new user by typin
 ```
 createuser --interactive
 ```
-The script will prompt you with some choices and, based on your responses, execute the correct Postgres commands to create a user to your specifications.
 
 ```
 Enter name of role to add: zet
@@ -50,8 +51,14 @@ exit
 ### Open a Postgres Prompt with the New Role
 
 ```
-sudo -i -u sammy
+sudo -i -u zet
 psql
+```
+
+### Install psycopg2 for Python
+```
+sudo apt-get install python-psycopg2
+sudo apt-get install libpq-dev
 ```
 
 
